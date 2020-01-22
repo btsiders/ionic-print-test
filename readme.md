@@ -28,7 +28,7 @@ The `body`, `ion-app`, `ion-router-outlet`, `app-home`, and `ion-content` elemen
 
 Once that is done, everything works fine **except for the `ion-content main.inner-scroll` element**. It needs to be set to `position:relative` to be visible while printing.
 
-In this example app, if you print the home page from Chrome, you'll notice a blamk page. If you then use the developer tools (`F12` or `CTRL-SHIFT-I`) to manually add `position:relative` to the `main.inner-scroll` element, you'll notice the scrollbar disappears in the screen display, but then printing works across multiple pages.
+In this example app, if you print the home page from Chrome, you'll notice a blank page. If you then use the developer tools (`F12` or `CTRL-SHIFT-I`) to manually add `position:relative` to the `main.inner-scroll` element, you'll notice the scrollbar disappears in the screen display, but then printing works across multiple pages.
 
 ## Solution?
 
