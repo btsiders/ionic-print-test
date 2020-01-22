@@ -24,3 +24,35 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@media print {
+
+    // don't box the body in when printing
+    body {
+        position: relative !important;
+        max-width: unset !important;
+        height: unset !important;
+        max-height: unset !important;
+    }
+
+    // don't contain these elements either
+    app-home,
+    ion-app,
+    ion-router-outlet,
+    ion-content {
+        position: relative !important;
+        contain: unset !important;
+    }
+
+    // used for the ion-header
+    .no-print {
+        display: none;
+    }
+
+}
+
+// TODO: set the ion-content main.inner-scroll position to print across multiple pages
+// ! doesn't work
+.inner-scroll {
+    position: relative !important;
+}

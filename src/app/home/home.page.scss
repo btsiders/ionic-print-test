@@ -1,1 +1,60 @@
+// some styling for our report
+ion-content.report {
 
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        width: 100%;
+        page-break-inside: auto;
+
+        tr, td {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        th,
+        td {
+            padding: 3px 5px;
+        }
+
+        thead {
+            th,
+            td {
+                height: 2em;
+                vertical-align: bottom;
+            }
+        }
+
+        tfoot {
+            th,
+            td {
+                height: 2em;
+                vertical-align: top;
+            }
+        }
+
+        &.report-data {
+
+            th,
+            td {
+                border: 1px solid #000;
+            }
+
+            // spacing between data tables
+            &:not(:last-of-type) {
+                margin-bottom: 3em;
+            }
+        }
+
+    }
+}
+
+@media screen {
+    // padding just for the screen
+    ion-content.report {
+        --padding-top: 30px;
+        --padding-bottom: 30px;
+        --padding-start: 30px;
+        --padding-end: 30px;
+    }
+}

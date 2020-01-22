@@ -1,14 +1,63 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="no-print">
+  <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
+      Toolbar set to not print
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content class="report">
+  <table class="report-overall">
+    <thead>
+      <tr>
+        <th>Repeating page header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <table class="report report-data" *ngFor="let t of ['A', 'B', 'C', 'D']">
+          <thead>
+            <tr>
+              <th>table header {{ t }}</th>
+              <th>header</th>
+              <th>header</th>
+              <th>header</th>
+              <th>header</th>
+              <th>header</th>
+              <th>header</th>
+              <th>header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]">
+              <th>blah #{{ i }}</th>
+              <td>blah</td>
+              <td>blah</td>
+              <td>blah</td>
+              <td>blah</td>
+              <td>blah</td>
+              <td>blah</td>
+              <td>blah</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>table footer {{ t }}</th>
+              <th>footer</th>
+              <th>footer</th>
+              <th>footer</th>
+              <th>footer</th>
+              <th>footer</th>
+              <th>footer</th>
+              <th>footer</th>
+            </tr>
+          </tfoot>
+        </table>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Repeating page footer</th>
+      </tr>
+    </tfoot>
+  </table>
 </ion-content>
