@@ -56,5 +56,8 @@ ion-content.report {
         --padding-bottom: 30px;
         --padding-start: 30px;
         --padding-end: 30px;
+
+        // add scrolling back after removing via content-sizing
+        overflow: auto;
     }
 }
