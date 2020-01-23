@@ -29,10 +29,11 @@
 
     // don't box the body in when printing
     body {
-        position: relative !important;
-        max-width: unset !important;
-        height: unset !important;
-        max-height: unset !important;
+        position: relative;
+        max-width: unset;
+        height: unset;
+        max-height: unset;
+        overflow: unset;
     }
 
     // don't contain these elements either
